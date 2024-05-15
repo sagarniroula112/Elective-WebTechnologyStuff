@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone-book</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+        .poetsen-one-regular {
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .container {
+            font-family: "Poetsen One";
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            padding: 30px;
+            border: 2px solid rgb(126, 79, 79);
+            border-radius: 45px;
+            height: 67vh;
+        }
+
+        * {
+            font-family: 'Poetsen One';
+        }
+
+        .form-box h1 {
+            margin-bottom: 5vh;
+        }
+
+        input {
+            margin: 5px;
+            height: 3vh;
+        }
+
+        .inside-inputs {
+            margin-top: 8px;
+        }
+
+        .inside-inputs input {
+            width: 96%;
+            /* margin-top: 0px; */
+        }
+
+        .interest-checkboxes {
+            margin-top: 12px;
+        }
+
+        .skills-country {
+            margin-top: 18px;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .country {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skills-country select {
+            margin-top: 5px;
+        }
+
+        .email {
+            margin-top: 13px;
+        }
+
+        .email input {
+            width: 95%;
+            margin: 5px;
+            height: 3vh;
+        }
+
+        #submit {
+            margin-top: 30px;
+            border-radius: 12px;
+            padding: 10px 42%;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+
+        #submit:hover {
+            background-color: white;
+            color: rgb(99, 97, 97);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1>Phonebook Form</h1>
+
+            <form action="/saveData" method="post">
+                <div class="inputs">
+                    <input type="text" placeholder="Name" name="name"> <!-- Changed name attribute -->
+                    <input type="number" placeholder="Phone" name="phone">
+                    <div class="inside-inputs">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="text" placeholder="Address" name="address"> <!-- Changed input type -->
+                    </div>
+                    <div class="interest-checkboxes">
+                        <fieldset>
+                            <legend>Interests</legend>
+                            <input type="checkbox" id="interest1" name="interests" value="Sports">
+                            <!-- Changed name attribute -->
+                            <label for="interest1"> Sports</label>
+                            <input type="checkbox" id="interest2" name="interests" value="Music">
+                            <!-- Changed name attribute -->
+                            <label for="interest2"> Music</label>
+                            <input type="checkbox" id="interest3" name="interests" value="Art">
+                            <!-- Changed name attribute -->
+                            <label for="interest3"> Art</label>
+                            <input type="checkbox" id="interest4" name="interests" value="Coding">
+                            <!-- Changed name attribute -->
+                            <label for="interest4"> Coding</label><br>
+                            <input type="checkbox" id="interest5" name="interests" value="Astronomy">
+                            <!-- Changed name attribute -->
+                            <label for="interest5"> Astronomy</label>
+                            <!-- Add more checkboxes as needed -->
+                        </fieldset>
+                    </div>
+                    <div class="skills-country">
+                        <div class="skill">
+                            <label for="skills">Skill</label>
+                            <select id="skills" name="skill"> <!-- Changed name attribute -->
+                                <option value="">Select a skill...</option>
+                                <option value="JavaScript">JavaScript</option>
+                                <option value="HTML">HTML</option>
+                                <option value="CSS">CSS</option>
+                                <option value="Python">Python</option>
+                                <option value="Java">Java</option>
+                                <option value="C++">C++</option>
+                                <option value="SQL">SQL</option>
+                                <option value="React">React</option>
+                                <option value="Angular">Angular</option>
+                                <option value="Vue.js">Vue.js</option>
+                                <option value="Node.js">Node.js</option>
+                                <option value="Express.js">Express.js</option>
+                            </select>
+                        </div>
+                        <div class="country">
+                            <label for="country">Country</label>
+                            <select id="country" name="country"> <!-- Changed name attribute -->
+                                <option value="">Select your country...</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                                <option value="Russia">Russia</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="Srilanka">Srilanka</option>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Mongolia">Mongolia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button id="submit">Submit</button> <!-- Closed button tag -->
+            </form>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
